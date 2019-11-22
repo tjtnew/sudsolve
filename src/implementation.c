@@ -252,9 +252,10 @@ bool hidden_values_row(int grid[N][N], int row) {
                 possible[(tmp->array[i]) - 1] = possible[(tmp->array[i]) - 1] + 1;
                 index[(tmp->array[i]) - 1] = j;
             }
+            free_int_array(tmp);
         }
-
     }
+
     if (flag == true) {
         flag = false;
         for (int i = 0; i < N; i++) {
@@ -282,9 +283,11 @@ bool hidden_values_col(int grid[N][N], int col) {
                 possible[(tmp->array[i]) - 1] = possible[(tmp->array[i]) - 1] + 1;
                 index[(tmp->array[i]) - 1] = j;
             }
+            free_int_array(tmp);
         }
 
     }
+
     if (flag == true) {
         flag = false;
         for (int i = 0; i < N; i++) {
@@ -319,10 +322,12 @@ bool hidden_values_square(int grid[N][N], int square_row, int square_col) {
                     index[0][(tmp->array[i]) - 1] = row;
                     index[1][(tmp->array[i]) - 1] = col;
                 }
+                free_int_array(tmp);
             }
 
         }
     }
+
     if (flag == true) {
         flag = false;
         for (int i = 0; i < N; i++) {
