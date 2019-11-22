@@ -1,25 +1,32 @@
 ---
-title: "sudsolve"
-output: rmarkdown::html_vignette
-vignette: >
-  %\VignetteIndexEntry{overview}
-  %\VignetteEngine{knitr::rmarkdown}
-  %\VignetteEncoding{UTF-8}
+output: github_document
 ---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
 
 ```{r, include = FALSE}
 knitr::opts_chunk$set(
   collapse = TRUE,
-  comment = "#>"
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
 )
 ```
 
-## Overview
+# sudsolve
 `sudsolve` is a small personal project that I've used to get my head around both
 C code and how to use it with `R`.  It provides a single user facing function,
 `solveGameQuick`, that will solve any standard (9 by 9) sudoku puzzle.  
 
-The solver works in two stages.  Firstly, humanesque methods are employed to 
+## Installation
+You can install from [GitHub](https://github.com/) with:
+
+``` r
+# install.packages("devtools")
+devtools::install_github("tjtnew/sudsolve")
+```
+## Overview
+The solver works in two stages.  Firstly, humanesque[^1] methods are employed to 
 fill in the sudoku as much as possible.  Currently this is done by looking for 
 both [lone](https://www.learn-sudoku.com/lone-singles.html) and 
 [hidden](https://www.learn-sudoku.com/hidden-singles.html) singles.  Secondly,
@@ -83,3 +90,4 @@ game <- as.sudoku(game)
 plot(game)
 game %>% solveGameQuick() %>% plot()
 ```
+
