@@ -1,0 +1,53 @@
+---
+title: "sudsolve"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{overview}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+## Overview
+`sudsolve` is a small personal project that I've used to get my head around both
+C code and how to use it with `R`.  It provides a single user facing function,
+`solveGameQuick`, that will solve any standard (9 by 9) sudoku puzzle.  
+
+The solver works in two stages.  Firstly, humanesque methods are employed to 
+fill in the sudoku as much as possible.  Currently this is done by looking for 
+both [lone](https://www.learn-sudoku.com/lone-singles.html) and 
+[hidden](https://www.learn-sudoku.com/hidden-singles.html) singles.  Secondly,
+we employ a brute-force recursive approach to fill in the remaining squares.
+
+The code is not pretty but gets the job done relatively quickly.  For
+those looking for some very elegant `R` code please look at the CRAN package 
+[sudokuAlt](https://cran.r-project.org/web/packages/sudokuAlt/) by Bill
+Venables.  It'a a fantastic little package that shows just how beautiful and
+succinct R can be!
+
+## Example
+Puzzles can be defined as matrices with either zeros or NAs representing missing
+values.  The output is then returned to the user in a similar form.
+
+```{r setup}
+library(sudsolve)
+
+r1 <- c(0, 0, 0, 7, 0, 0, 0, 0, 0)
+r2 <- c(1, 0, 0, 0, 0, 0, 0, 0, 0)
+r3 <- c(0, 0, 0, 4, 3, 0, 2, 0, 0)
+r4 <- c(0, 0, 0, 0, 0, 0, 0, 0, 6)
+r5 <- c(0, 0, 0, 5, 0, 9, 0, 0, 0)
+r6 <- c(0, 0, 0, 0, 0, 0, 4, 1, 8)
+r7 <- c(0, 0, 0, 0, 8, 1, 0, 0, 0)
+r8 <- c(0, 0, 2, 0, 0, 0, 0, 5, 0)
+r9 <- c(0, 4, 0, 0, 0, 0, 3, 0, 0)
+
+game <- rbind(r1,r2,r3,r4,r5,r6,r7,r8,r9)
+solveGameQuick(game)
+```
