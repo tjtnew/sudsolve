@@ -74,12 +74,12 @@ of [sudokuAlt](https://cran.r-project.org/web/packages/sudokuAlt/)
 
 ```{r out.width='50%', fig.align='center'}
 library(sudokuAlt)
+
 r1 <- c(4, 0, 0, 0, 0, 0, 0, 0, 7)
 r2 <- c(0, 0, 0, 8, 5, 7, 6, 0, 0)
 r3 <- c(0, 0, 0, 0, 6, 0, 9, 0, 0)
 r4 <- c(0, 9, 0, 0, 0, 0, 0, 0, 5)
 r5 <- c(1, 0, 5, 6, 0, 8, 4, 0, 3)
-
 r6 <- c(8, 0, 0, 0, 0, 0, 0, 1, 0)
 r7 <- c(0, 0, 7, 0, 8, 0, 0, 0, 0)
 r8 <- c(0, 0, 3, 4, 7, 1, 0, 0, 0)
