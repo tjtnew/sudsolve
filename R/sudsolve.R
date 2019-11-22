@@ -11,7 +11,7 @@ NULL
 #'
 #' @param sudoku the puzzle to be solved
 #' @export
-solveGameQuick <- function(sudoku) {
+sudsolve <- function(sudoku) {
     tmp <- as.integer(t(sudoku))
     if (anyNA(tmp)) {
         tmp[is.na(tmp)] <- 0L
@@ -37,7 +37,7 @@ solveGameQuick <- function(sudoku) {
 #' hidden singles)
 #'
 #' @param sudoku the puzzle to be solved
-solveHuman <- function(sudoku) {
+sudsolve_human <- function(sudoku) {
     tmp <- as.integer(t(sudoku))
     if (anyNA(tmp)) {
         tmp[is.na(tmp)] <- 0L
@@ -63,7 +63,7 @@ solveHuman <- function(sudoku) {
 #'
 #' @param sudoku the puzzle to be solved
 #' @export
-solveBrute <- function(sudoku) {
+sudsolve_brute <- function(sudoku) {
     tmp <- as.integer(t(sudoku))
     if (anyNA(tmp)) {
         tmp[is.na(tmp)] <- 0L

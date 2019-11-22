@@ -16,7 +16,7 @@ knitr::opts_chunk$set(
 # sudsolve
 `sudsolve` is a small personal project that I've used to get my head around both
 C code and how to use it with `R`.  It provides a single user facing function,
-`solveGameQuick`, that will solve any standard (9 by 9) sudoku puzzle.  
+`sudsolve`, that will solve any standard (9 by 9) sudoku puzzle.  
 
 ## Installation
 You can install from [GitHub](https://github.com/) with:
@@ -56,7 +56,7 @@ r8 <- c(0, 0, 2, 0, 0, 0, 0, 5, 0)
 r9 <- c(0, 4, 0, 0, 0, 0, 3, 0, 0)
 
 game <- rbind(r1,r2,r3,r4,r5,r6,r7,r8,r9)
-solution <- solveGameQuick(game)
+solution <- sudsolve(game)
 solution
 ```
 
@@ -88,6 +88,6 @@ r9 <- c(6, 0, 0, 0, 0, 0, 0, 0, 9)
 game <- rbind(r1,r2,r3,r4,r5,r6,r7,r8,r9)
 game <- as.sudoku(game)
 plot(game)
-game %>% solveGameQuick() %>% plot()
+game %>% sudsolve() %>% plot()
 ```
 

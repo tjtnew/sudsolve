@@ -13,7 +13,7 @@ if (requireNamespace("sudokuAlt", quietly = TRUE)) {
     r9 <- c(0, 4, 0, 0, 0, 0, 3, 0, 0)
 
     game <- rbind(r1,r2,r3,r4,r5,r6,r7,r8,r9)
-    result <- solveGameQuick(game)
+    result <- sudsolve(game)
     expected <- sudokuAlt::solveGame(game)
     expect_identical(result, expected, "testing puzzle 1 solution matches sudokuAlt")
 }
@@ -32,7 +32,7 @@ if (requireNamespace("sudokuAlt", quietly = TRUE)) {
     r9 <- c(6, 0, 0, 0, 0, 0, 0, 0, 9)
 
     game <- rbind(r1,r2,r3,r4,r5,r6,r7,r8,r9)
-    result <- solveGameQuick(game)
+    result <- sudsolve(game)
     expected <- sudokuAlt::solveGame(game)
     expect_identical(result, expected, "testing puzzle 2 solution matches sudokuAlt")
 }
@@ -52,7 +52,7 @@ if (requireNamespace("sudokuAlt", quietly = TRUE)) {
     r9 <- c(0, 9, 0, 0, 0, 0, 4, 0, 0)
 
     game <- rbind(r1,r2,r3,r4,r5,r6,r7,r8,r9)
-    result <- solveGameQuick(game)
+    result <- sudsolve(game)
     expected <- sudokuAlt::solveGame(game)
     expect_identical(result, expected, "testing puzzle 3 solution matches sudokuAlt")
 }
@@ -71,6 +71,6 @@ r8 <- c(0, 0, 8, 5, 0, 0, 0, 1, 0)
 r9 <- c(0, 9, 0, 0, 0, 0, 4, 0, 0)
 
 game <- rbind(r1,r2,r3,r4,r5,r6,r7,r8,r9)
-expected <- solveGameQuick(game)
-result <- solveBrute(game)
+expected <- sudsolve(game)
+result <- sudsolve_brute(game)
 expect_identical(result, expected, "testing combined solver matches brute solver")

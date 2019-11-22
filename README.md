@@ -5,7 +5,7 @@
 
 `sudsolve` is a small personal project that I’ve used to get my head
 around both C code and how to use it with `R`. It provides a single user
-facing function, `solveGameQuick`, that will solve any standard (9 by 9)
+facing function, `sudsolve`, that will solve any standard (9 by 9)
 sudoku puzzle.
 
 ## Installation
@@ -53,7 +53,7 @@ r8 <- c(0, 0, 2, 0, 0, 0, 0, 5, 0)
 r9 <- c(0, 4, 0, 0, 0, 0, 3, 0, 0)
 
 game <- rbind(r1,r2,r3,r4,r5,r6,r7,r8,r9)
-solution <- solveGameQuick(game)
+solution <- sudsolve(game)
 solution
 ```
 
@@ -95,7 +95,7 @@ plot(game)
 <img src="man/figures/README-unnamed-chunk-4-1.png" width="50%" style="display: block; margin: auto;" />
 
 ``` r
-game %>% solveGameQuick() %>% plot()
+game %>% sudsolve() %>% plot()
 ```
 
 <img src="man/figures/README-unnamed-chunk-4-2.png" width="50%" style="display: block; margin: auto;" />
