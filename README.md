@@ -19,11 +19,10 @@ devtools::install_github("tjtnew/sudsolve")
 
 ## Overview
 
-The solver works in two stages. Firstly, humanesque\[^1\] methods are
-employed to fill in the sudoku as much as possible. Currently this is
-done by looking for both
-[lone](https://www.learn-sudoku.com/lone-singles.html) and
-[hidden](https://www.learn-sudoku.com/hidden-singles.html) singles.
+The solver works in two stages. Firstly, human-like methods are employed
+to fill in the sudoku as much as possible. Currently this is done by
+looking for both [lone](https://www.learn-sudoku.com/lone-singles.html)
+and [hidden](https://www.learn-sudoku.com/hidden-singles.html) singles.
 Secondly, we employ a brute-force recursive approach to fill in the
 remaining squares.
 
