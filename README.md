@@ -1,6 +1,12 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
+<!-- badges: start -->
+
+[![R build
+status](https://github.com/tjtnew/sudsolve/workflows/R-CMD-check/badge.svg)](https://github.com/tjtnew/sudsolve/actions)
+<!-- badges: end -->
+
 # sudsolve
 
 `sudsolve` is a small personal project that I’ve used to get my head
