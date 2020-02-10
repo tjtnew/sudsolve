@@ -9,10 +9,10 @@ status](https://github.com/tjtnew/sudsolve/workflows/R-CMD-check/badge.svg)](htt
 
 # sudsolve
 
-`sudsolve` is a small personal project that I’ve used to get my head
-around both C code and how to use it with `R`. It provides a single user
-facing function, `sudsolve`, that will solve any standard (9 by 9)
-sudoku puzzle.
+`sudsolve` is a small package that I’ve used to get my head around both
+C code and how to use it with `R`. It provides a single user facing
+function, `sudsolve`, that will solve any standard (9 by 9) sudoku
+puzzle.
 
 ## Installation
 
