@@ -17,5 +17,6 @@ Suggests:
     tinytest,
     sudokuAlt,
     knitr,
-    rmarkdown
+    rmarkdown,
+    covr
 VignetteBuilder: knitr
