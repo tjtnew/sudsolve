@@ -5,6 +5,7 @@
 
 [![R build
 status](https://github.com/tjtnew/sudsolve/workflows/R-CMD-check/badge.svg)](https://github.com/tjtnew/sudsolve/actions)
+[![codecov](https://codecov.io/gh/tjtnew/sudsolve/branch/master/graph/badge.svg)](https://codecov.io/gh/tjtnew/sudsolve)
 <!-- badges: end -->
 
 # sudsolve
